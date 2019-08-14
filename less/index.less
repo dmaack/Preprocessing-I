@@ -7,9 +7,10 @@
 */
 
 /********** VARIABLES *************/
-@headerbackground: gainsboro;
+@headerbackground: #e8ecef;
 @header-font: 'Lato', sans-serif;
-
+@secondcolor:#808080;
+@tablecolor: #f2f2f2;
 /********** MIXINS ****************/
 .border-skills(){
 	width:50%;
@@ -74,7 +75,16 @@ html, body {
 	height: 100%;
 }
 
+
 /****************** HEADER STYLES HERE ***************/
+header{
+	background-color: @headerbackground;
+	font-family: @header-font;
+}
+button{
+	background-color: @secondcolor;
+	color:white;
+}
 .skills-table {
 	
 	text-align:left;
@@ -91,4 +101,11 @@ html, body {
 		border-top:1px solid grey;
 		text-align:left;	
 	}//closes tr th tag
+	.special-table{
+		background-color: @tablecolor;
+	}
 }//closes main work history table
+
+footer p{
+	background-color: @secondcolor;
+}

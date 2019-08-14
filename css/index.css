@@ -138,6 +138,14 @@ body {
   height: 100%;
 }
 /****************** HEADER STYLES HERE ***************/
+header {
+  background-color: #e8ecef;
+  font-family: 'Lato', sans-serif;
+}
+button {
+  background-color: #808080;
+  color: white;
+}
 .skills-table {
   text-align: left;
 }
@@ -154,4 +162,10 @@ body {
 .work-history-table tr th {
   border-top: 1px solid grey;
   text-align: left;
+}
+.work-history-table .special-table {
+  background-color: #f2f2f2;
+}
+footer p {
+  background-color: #808080;
 }

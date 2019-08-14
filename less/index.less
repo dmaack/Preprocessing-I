@@ -6,6 +6,18 @@
    License: none (public domain)
 */
 
+/********** VARIABLES *************/
+@headerbackground: gainsboro;
+@header-font: 'Lato', sans-serif;
+
+/********** MIXINS ****************/
+.border-skills(){
+	width:50%;
+	padding:2%;
+	margin:2%;
+}
+
+
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
 a, abbr, acronym, address, big, cite, code,
@@ -53,11 +65,30 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
+	max-width:100%;
     box-sizing: border-box;
 }
 
 html, body {
+
 	height: 100%;
-	background-color:red;
 }
 
+/****************** HEADER STYLES HERE ***************/
+.skills-table {
+	
+	text-align:left;
+	tr th{
+		border:1px solid grey;
+		.border-skills();
+	}
+}//closes main skills table
+
+.work-history-table {
+	width:90%;
+	padding:1.5rem;
+	tr th{
+		border-top:1px solid grey;
+		text-align:left;	
+	}//closes tr th tag
+}//closes main work history table

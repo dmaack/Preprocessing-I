@@ -1,1 +1,420 @@
-/* Compile your LESS file! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/********** VARIABLES *************/
+/********** MIXINS ****************/
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* Set every element's box-sizing to border-box */
+* {
+  box-sizing: border-box;
+  max-width: 100%;
+}
+html,
+body {
+  height: 100%;
+}
+h1,
+h2,
+h3 {
+  font-family: 'Roboto Mono', monospace;
+}
+p {
+  line-height: 1.5;
+}
+/****************** HEADER STYLES HERE ***************/
+header {
+  width: 95%;
+  font-family: 'Roboto Mono', monospace;
+  margin-left: 4%;
+}
+header nav {
+  width: 95%;
+}
+header .links {
+  display: flex;
+  justify-content: flex-end;
+  align-items: none;
+}
+@media (max-width:500px) {
+  header .links {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+header a {
+  padding: 2%;
+  text-decoration: none;
+  color: black;
+  font-size: 1.5rem;
+}
+header a:hover {
+  color: #9a9a9a;
+}
+header .header-img {
+  width: 30%;
+  padding: 5% 0 2% 4%;
+}
+@media (max-width:500px) {
+  header .header-img {
+    width: 85%;
+    margin: 5% 0 5% 5%;
+    padding: 10% 0 0 5%;
+  }
+}
+header .headerContainer {
+  width: 95%;
+  background-color: #e8ecef;
+}
+@media (max-width:500px) {
+  header .about {
+    width: 85%;
+    margin-left: 8%;
+  }
+}
+header h1 {
+  padding-left: 4%;
+  font-size: 2.5rem;
+}
+@media (max-width:500px) {
+  header h1 {
+    font-size: 1.9rem;
+    line-height: 1.5;
+  }
+}
+header hr {
+  width: 92%;
+  display: block;
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+}
+header p {
+  width: 75%;
+  padding: 2% 0 2% 4%;
+  font-size: 1.2rem;
+}
+@media (max-width:500px) {
+  header p {
+    font-size: 1.1rem;
+  }
+}
+header #button {
+  margin: 2% 0 8% 4%;
+  padding: 1% 3% 1% 3%;
+  border-radius: 10px;
+  background-color: #808080;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+header #button:hover {
+  color: #cad3da;
+}
+/****************** TOP INFO ********************/
+#top-info {
+  width: 95%;
+  margin: 1% 0 2% 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: 'Roboto Mono', monospace;
+}
+@media (max-width:500px) {
+  #top-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
+#top-info div {
+  width: 48%;
+  height: auto;
+}
+#top-info .attention {
+  padding-top: 2%;
+}
+@media (max-width:500px) {
+  #top-info .attention {
+    width: 95%;
+    margin-right: 5%;
+    margin-bottom: 5%;
+  }
+}
+#top-info .attention h2 {
+  padding-bottom: 1%;
+  font-size: 1.9rem;
+}
+@media (max-width:500px) {
+  #top-info .attention h2 {
+    margin-bottom: 2%;
+    font-size: 1.8rem;
+  }
+}
+#top-info .skills {
+  padding: 2%;
+  font-size: 2rem;
+}
+@media (max-width:500px) {
+  #top-info .skills {
+    width: 100%;
+    padding: 0;
+    margin-bottom: 5%;
+  }
+}
+#top-info .skills h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 2%;
+}
+#top-info .skills-table {
+  width: 93%;
+  border-collapse: collapse;
+}
+#top-info .skills-table tr th {
+  border: 2px solid #e8ecef;
+  font-size: 1rem;
+  text-align: left;
+  width: 50%;
+  padding: 4%;
+  margin: 2%;
+}
+/********************* BOTTOM INFO *******************/
+#bottom-info {
+  width: 95%;
+  margin-left: 5%;
+  font-family: 'Roboto Mono', monospace;
+}
+#bottom-info h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+  margin-bottom: 1%;
+}
+@media (max-width:500px) {
+  #bottom-info h3 {
+    margin-bottom: 3%;
+  }
+}
+#bottom-info .work-history {
+  margin-bottom: 4%;
+}
+#bottom-info .work-history-table {
+  width: 95%;
+  padding: 1.5rem;
+}
+@media (max-width:500px) {
+  #bottom-info .work-history-table {
+    width: 95%;
+  }
+}
+#bottom-info .work-history-table tr th {
+  border-top: 1px solid #e8ecef;
+  font-weight: 1000;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 0.5%;
+  text-align: left;
+}
+@media (max-width:500px) {
+  #bottom-info .work-history-table tr th {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    font-size: 0.9rem;
+  }
+}
+#bottom-info .work-history-table tr td {
+  border-top: 1px solid #e8ecef;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  padding-left: 0.5%;
+}
+@media (max-width:500px) {
+  #bottom-info .work-history-table tr td {
+    padding-top: 5%;
+    padding-bottom: 5%;
+    padding-left: 2%;
+    font-size: 0.8rem;
+  }
+}
+#bottom-info .work-history-table .special-table {
+  background-color: #f2f2f2;
+}
+/*********************** CONTACT FORM ***********************/
+.wrapper {
+  width: 95%;
+  margin-left: 5%;
+}
+@media (max-width:500px) {
+  .wrapper {
+    display: none;
+  }
+}
+.wrapper .inner {
+  width: 95%;
+}
+.wrapper .inner .fields {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+.wrapper .inner div {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+.wrapper .inner div label {
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+.wrapper h2 {
+  width: 95%;
+  margin: 0 0 1% 3%;
+  font-size: 1.3rem;
+  text-align: center;
+}
+.wrapper .actions {
+  margin-top: 2%;
+  margin-left: 45%;
+  margin-bottom: 2%;
+}
+footer {
+  width: 95%;
+  margin-left: 5%;
+  margin-bottom: 5%;
+}
+footer p {
+  width: 95%;
+  color: white;
+  font-size: 1.3rem;
+  font-family: 'Roboto Mono', monospace;
+  text-align: center;
+  padding: 2%;
+  background-color: #808080;
+}

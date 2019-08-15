@@ -1,8 +1,31 @@
+// Dominique Maack ---
+
 // Is this working?
 /* http://meyerweb.com/eric/tools/css/reset/ 
    v2.0 | 20110126
    License: none (public domain)
 */
+
+/********** VARIABLES *************/
+@headerbackground: #e8ecef;
+@main-font: 'Roboto Mono', monospace;
+@secondcolor:#808080;
+@tablecolor: #f2f2f2;
+@iphone: ~"(max-width:500px)";
+
+/********** MIXINS ****************/
+.border-skills(){
+	width:50%;
+	padding:4%;
+	margin:2%;
+}
+.displayFlex(@justify, @align) {
+	display:flex;
+	justify-content: @justify;
+	align-items: @align;
+}
+
+
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -23,6 +46,7 @@ time, mark, audio, video {
 	font-size: 100%;
 	font: inherit;
 	vertical-align: baseline;
+
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
@@ -50,10 +74,289 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
-    box-sizing: border-box;
+	box-sizing: border-box;
+	// padding:0;
+	// margin:0;
+	max-width:100%;
 }
 
 html, body {
-    height: 100%;
+	// margin:auto;
+	height: 100%;
 }
+
+h1, h2, h3{
+	font-family: @main-font;
+}
+p{
+	line-height:1.5;
+}
+
+
+/****************** HEADER STYLES HERE ***************/
+header{
+	width:95%;
+	font-family: @main-font;
+	margin-left:4%;
+		nav{
+			width:95%;
+		}//closes nav bar
+		.links{
+			.displayFlex(flex-end, none);
+				@media @iphone{
+					width:100%;
+					.displayFlex(space-between, center);
+				}
+		}//closes links
+		a{
+			padding:2%;
+			text-decoration: none;
+			color:black;
+			font-size:1.5rem;
+			&:hover{ 
+				color: lighten(@secondcolor, 10%);
+			}
+		}//closes a tag
+		.header-img{
+			width:30%;	
+			padding: 5% 0 2% 4%;
+			@media @iphone{
+				width:85%;
+				margin:5% 0 5% 5%;
+				padding:10% 0 0 5%;
+			}
+		}//closes header image
+		.headerContainer{
+			width:95%;
+			background-color: @headerbackground;
+				
+		}//closes headerContainer
+		.about{
+			@media @iphone{
+				width:85%;
+				margin-left:8%;
+			}
+		}
+		h1{
+			padding-left:4%;
+			font-size:2.5rem;
+				@media @iphone{
+					font-size:1.9rem;
+					line-height:1.5;
+				}
+		}//closes h1 tag
+		hr{
+			width:92%;
+			display:block;
+			margin-top:.5em;
+			margin-bottom:.5em;
+			margin-left:auto;
+			margin-right:auto;
+			border-style:inset;
+			border-width:1px;
+
+			
+		}
+		p{
+			width:75%;
+			padding:2% 0 2% 4%;
+			font-size:1.2rem;
+			@media @iphone{
+				font-size:1.1rem;
+			}
+		}//closes p tag
+		
+		#button{
+			margin:2% 0 8% 4%;
+			padding:1% 3% 1% 3%;
+			border-radius:10px;
+			background-color: @secondcolor;
+			&:hover{
+				color: darken(@headerbackground, 10%);
+			}
+			color:white;
+			font-size:1.5rem;
+			font-weight: bold;
+			
+		}//closes button
+}//closes header tag
+
+
+
+/****************** TOP INFO ********************/
+
+
+#top-info{
+	width:95%;
+	margin:1% 0 2% 5%;
+	.displayFlex(space-between, center);
+	font-family: @main-font;
+	@media @iphone{
+		display:flex;
+		flex-direction: column;
+	}
+		div{
+			width:48%;
+			height:auto;	
+		}
+	
+		.attention{
+			padding-top:2%;
+			@media @iphone{
+				width:95%;
+				margin-right:5%;
+				margin-bottom: 5%;
+
+			}
+			h2{
+				padding-bottom:1%;
+				font-size:1.9rem;
+				@media @iphone{
+					margin-bottom: 2%;
+					font-size: 1.8rem;
+				}
+			}
+		}//closes attention
+		.skills{
+				padding:2%;
+				font-size:2rem;
+				@media @iphone{
+					width:100%;
+					padding:0;
+					margin-bottom: 5%;
+				}
+				h3{
+					font-size:1.2rem;
+					font-weight: bold;
+					margin-bottom: 2%;
+				}
+			}
+		
+	
+		.skills-table {
+			width:93%;
+			border-collapse: collapse;
+			// border-spacing:10px;
+			// margin:2% 0 2% 0;
+
+			tr th{
+				border:2px solid @headerbackground;
+				font-size:1rem;
+				text-align:left;	
+				.border-skills();
+			}
+		}
+
+}//closes top info section
+
+/********************* BOTTOM INFO *******************/
+
+#bottom-info{
+	width:95%;
+	margin-left:5%;
+	font-family: @main-font;
+		h3{
+			font-size:1.2rem;
+			font-weight: bold;
+			margin-bottom:1%;
+			@media @iphone{
+				margin-bottom: 3%;
+			}
+		}
+		.work-history{
+			margin-bottom: 4%;
+		}
+		.work-history-table {
+			width:95%;
+			padding:1.5rem;
+			@media @iphone{
+				width:95%;
+			}
+			tr th{
+				border-top:1px solid @headerbackground;
+				font-weight: 1000;
+				padding-top:1%;
+				padding-bottom: 1%;
+				padding-left:.5%;
+				text-align:left;	
+				@media @iphone{
+					padding-top:5%;
+					padding-bottom:5%;
+					padding-left:2%;
+					font-size: .9rem;
+				}
+			}//closes tr th tag
+			tr td{
+				border-top:1px solid @headerbackground;
+				padding-top:1%;
+				padding-bottom: 1%;
+				padding-left:.5%;
+				@media @iphone{
+					padding-top:5%;
+					padding-bottom:5%;
+					padding-left:2%;
+					font-size:.8rem;
+				}
+			}
+			.special-table{
+				background-color: @tablecolor;
+			}
+	}//closes main work history table
+	
+}
+
+/*********************** CONTACT FORM ***********************/
+
+.wrapper{
+	width:95%;
+	margin-left:5%;
+	@media @iphone{
+		display:none;
+	}
+	.inner{
+		width:95%;
+		.fields{
+			margin-left:20%;
+			margin-right:20%;
+		}
+			div{
+				
+				display:flex;
+				flex-direction: column;
+				align-content: center;
+				label{
+					margin-bottom:1%;
+					margin-top:1%;
+				}
+			}
+	}
+		h2{
+			width:95%;
+			margin:0 0 1% 3%;
+			font-size:1.3rem;
+			text-align: center;
+		}
+		.actions{
+			margin-top:2%;
+			margin-left:45%;
+			margin-bottom: 2%;
+		}
+	}
+	
+
+footer {
+	width:95%;
+	margin-left:5%;
+	margin-bottom: 5%;
+		p{
+		width:95%;	
+		color:white;
+		font-size:1.3rem;
+		font-family: @main-font;
+		text-align:center;
+		padding:2%;
+		background-color: @secondcolor;
+		}
+}
+
 

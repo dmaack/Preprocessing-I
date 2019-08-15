@@ -372,6 +372,11 @@ header #button:hover {
   width: 95%;
   margin-left: 5%;
 }
+@media (max-width:500px) {
+  .wrapper {
+    display: none;
+  }
+}
 .wrapper .inner {
   width: 95%;
 }

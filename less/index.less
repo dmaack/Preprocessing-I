@@ -67,18 +67,18 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
 	box-sizing: border-box;
-	padding:0;
-	margin:0;
+	// padding:0;
+	// margin:0;
 	max-width:100%;
 }
 
 html, body {
-	// margin:0 5% 0 5%;
+	// margin:auto;
 	height: 100%;
 }
 
 h1, h2, h3{
-	font-family: @header-font;
+	font-family: @main-font;
 }
 p{
 	line-height:1.5;
@@ -89,6 +89,7 @@ p{
 header{
 	width:95%;
 	font-family: @main-font;
+	margin-left:5%;
 		nav{
 			width:95%;
 		}//closes nav bar
@@ -151,13 +152,13 @@ header{
 
 
 #top-info{
-	width:100%;
-	margin:1% 0 2% 0;
+	width:95%;
+	margin:1% 0 2% 5%;
 	display:flex;
 	justify-content: space-between;
 	font-family: @main-font;
 		div{
-			width:49%;
+			width:48%;
 			height:auto;	
 		}
 	
@@ -196,6 +197,8 @@ header{
 
 
 #bottom-info{
+	width:95%;
+	margin-left:5%;
 	font-family: @main-font;
 		h3{
 			font-size:1.2rem;
@@ -210,6 +213,7 @@ header{
 			padding:1.5rem;
 			tr th{
 				border-top:1px solid @headerbackground;
+				font-weight: 1000;
 				padding-top:1%;
 				padding-bottom: 1%;
 				padding-left:.5%;
@@ -233,7 +237,10 @@ header{
 
 footer {
 	width:95%;
+	margin-left:5%;
+	margin-bottom: 5%;
 		p{
+		width:95%;	
 		color:white;
 		font-size:1.3rem;
 		font-family: @main-font;

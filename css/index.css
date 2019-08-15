@@ -131,26 +131,25 @@ table {
 /* Set every element's box-sizing to border-box */
 * {
   box-sizing: border-box;
-  padding: 0;
-  margin: 0;
   max-width: 100%;
 }
 html,
 body {
-  margin: 0 2.5% 0 2.5%;
   height: 100%;
 }
 h1,
 h2,
 h3 {
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 p {
   line-height: 1.5;
 }
 /****************** HEADER STYLES HERE ***************/
 header {
-  font-family: 'Lexend Tera', sans-serif;
+  width: 95%;
+  font-family: 'Roboto Mono', monospace;
+  margin-left: 5%;
 }
 header nav {
   width: 95%;
@@ -203,15 +202,14 @@ header #button {
 }
 /****************** TOP INFO ********************/
 #top-info {
-  width: 100%;
-  margin: 1% 6% 2% 0;
-  height: auto;
+  width: 95%;
+  margin: 1% 0 2% 5%;
   display: flex;
   justify-content: space-between;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Roboto Mono', monospace;
 }
 #top-info div {
-  width: 49%;
+  width: 48%;
   height: auto;
 }
 #top-info .attention {
@@ -243,7 +241,9 @@ header #button {
   margin: 2%;
 }
 #bottom-info {
-  font-family: 'Lexend Deca', sans-serif;
+  width: 95%;
+  margin-left: 5%;
+  font-family: 'Roboto Mono', monospace;
 }
 #bottom-info h3 {
   font-size: 1.2rem;
@@ -259,6 +259,7 @@ header #button {
 }
 #bottom-info .work-history-table tr th {
   border-top: 1px solid #e8ecef;
+  font-weight: 1000;
   padding-top: 1%;
   padding-bottom: 1%;
   padding-left: 0.5%;
@@ -275,11 +276,14 @@ header #button {
 }
 footer {
   width: 95%;
+  margin-left: 5%;
+  margin-bottom: 5%;
 }
 footer p {
+  width: 95%;
   color: white;
   font-size: 1.3rem;
-  font-family: 'Lexend Deca', sans-serif;
+  font-family: 'Roboto Mono', monospace;
   text-align: center;
   padding: 2%;
   background-color: #808080;

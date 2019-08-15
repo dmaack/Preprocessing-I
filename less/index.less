@@ -8,13 +8,13 @@
 
 /********** VARIABLES *************/
 @headerbackground: #e8ecef;
-@header-font: 'Lato', sans-serif;
+@main-font: 'Roboto Mono', monospace;
 @secondcolor:#808080;
 @tablecolor: #f2f2f2;
 /********** MIXINS ****************/
 .border-skills(){
 	width:50%;
-	padding:2%;
+	padding:4%;
 	margin:2%;
 }
 
@@ -66,46 +66,179 @@ table {
 
 /* Set every element's box-sizing to border-box */
 * {
+	box-sizing: border-box;
+	padding:0;
+	margin:0;
 	max-width:100%;
-    box-sizing: border-box;
 }
 
 html, body {
-
+	// margin:0 5% 0 5%;
 	height: 100%;
+}
+
+h1, h2, h3{
+	font-family: @header-font;
+}
+p{
+	line-height:1.5;
 }
 
 
 /****************** HEADER STYLES HERE ***************/
 header{
-	background-color: @headerbackground;
-	font-family: @header-font;
-}
-button{
-	background-color: @secondcolor;
-	color:white;
-}
-.skills-table {
+	width:95%;
+	font-family: @main-font;
+		nav{
+			width:95%;
+		}//closes nav bar
+		.links{
+			display: flex;
+			justify-content: flex-end;	
+		}//closes links
+		a{
+			padding:2%;
+			text-decoration: none;
+			color:black;
+			font-size:1.5rem;
+		}//closes a tag
+		.header-img{
+			width:30%;	
+			padding: 5% 0 2% 4%;
+		}//closes header image
+		.headerContainer{
+			width:95%;
+			background-color: @headerbackground;
+				
+		}//closes headerContainer
+		h1{
+			padding-left:4%;
+			font-size:2.5rem;
+		}//closes h1 tag
+		hr{
+			width:92%;
+			display:block;
+			margin-top:.5em;
+			margin-bottom:.5em;
+			margin-left:auto;
+			margin-right:auto;
+			border-style:inset;
+			border-width:1px;
+
+			
+		}
+		p{
+			width:75%;
+			padding:2% 0 2% 4%;
+			font-size:1.2rem;
+
+		}//closes p tag
+		
+		#button{
+			margin:2% 0 8% 4%;
+			padding:1% 3% 1% 3%;
+			border-radius:10px;
+			background-color: @secondcolor;
+			color:white;
+			font-size:1.5rem;
+			font-weight: bold;
+		}//closes button
+}//closes header tag
+
+
+
+/****************** TOP INFO ********************/
+
+
+#top-info{
+	width:100%;
+	margin:1% 0 2% 0;
+	display:flex;
+	justify-content: space-between;
+	font-family: @main-font;
+		div{
+			width:49%;
+			height:auto;	
+		}
 	
-	text-align:left;
-	tr th{
-		border:1px solid grey;
-		.border-skills();
-	}
-}//closes main skills table
+		.attention{
+			padding-top:2%;
+			h2{
+				padding-bottom:1%;
+				font-size:1.9rem;
+			}
+		}//closes attention
+		.skills{
+				padding:2%;
+				font-size:2rem;
+				h3{
+					font-size:1.2rem;
+					font-weight: bold;
+					margin-bottom: 2%;
+				}
+			}
+		
+	
+		.skills-table {
+			width:93%;
+			border-collapse: collapse;
+			// border-spacing:10px;
+			// margin:2% 0 2% 0;
+			tr th{
+				border:2px solid @headerbackground;
+				font-size:1rem;
+				text-align:left;	
+				.border-skills();
+			}
+		}
 
-.work-history-table {
-	width:90%;
-	padding:1.5rem;
-	tr th{
-		border-top:1px solid grey;
-		text-align:left;	
-	}//closes tr th tag
-	.special-table{
-		background-color: @tablecolor;
-	}
-}//closes main work history table
+}//closes top info section
 
-footer p{
-	background-color: @secondcolor;
+
+#bottom-info{
+	font-family: @main-font;
+		h3{
+			font-size:1.2rem;
+			font-weight: bold;
+			margin-bottom:1%;
+		}
+		.work-history{
+			margin-bottom: 4%;
+		}
+		.work-history-table {
+			width:95%;
+			padding:1.5rem;
+			tr th{
+				border-top:1px solid @headerbackground;
+				padding-top:1%;
+				padding-bottom: 1%;
+				padding-left:.5%;
+				text-align:left;	
+				
+			}//closes tr th tag
+			tr td{
+				border-top:1px solid @headerbackground;
+				padding-top:1%;
+				padding-bottom: 1%;
+				padding-left:.5%;
+			}
+			.special-table{
+				background-color: @tablecolor;
+			}
+	}//closes main work history table
+	
+}
+
+
+
+footer {
+	width:95%;
+		p{
+		color:white;
+		font-size:1.3rem;
+		font-family: @main-font;
+		text-align:center;
+		padding:2%;
+		background-color: @secondcolor;
+		}
 }

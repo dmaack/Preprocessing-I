@@ -7,7 +7,7 @@
 
   <title>Dominique Maack's Resume</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-  <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/index.css">
 
   <!--[if lt IE 9]>
@@ -18,25 +18,30 @@
 <body>
   <!------------------------ HEADER ----------------------------->
   <header id="#home">
-    <nav>
-      <div class="links">
-        <a href="index.html">Home</a>
-        <a href="#">About</a>
-        <a href="https://dmaack.github.io/">Portfolio</a>
-        <a href="#">Contact</a>
-      </div>
-    </nav>
-    <div class="header-img">
-      <img scr="/Users/tomanddom/Documents/Preprocessing-I/images/girlcoder.jpg" class="myphoto" alt="personal photo of myself">
-    </div>
-    <div class="about">
-      <h1>Dominique Maack</h1>
-        <p>I'm an aspiring Full Stack Web Developer based in Salt Lake City, Utah. I have worked in many different fields
-          and am excited to bring my collected experiences to the process of building websites.</p>
-        
-          <p>If you would like to work with me sign up on this website</p>
-        <button>Sign Up</button>
-    </div>
+    
+      <nav>
+        <div class="links">
+          <a href="index.html">Home</a>
+          <a href="#">About</a>
+          <a href="https://dmaack.github.io/" target="_blank">Portfolio</a>
+          <a href="#">Contact</a>
+        </div>
+      </nav>
+      <div class="headerContainer">
+        <div class="header-img">
+          <img src="images/girlcoder.jpg" class="myphoto" alt="personal photo of myself">
+        </div>
+
+        <div class="about">
+          <h1>Dominique Maack - Web Developer</h1>
+            <p class="specialP">I'm an aspiring Full Stack Web Developer based in Salt Lake City, Utah. I have worked in many different fields
+                and am excited to bring my collected experiences to the process of building websites.</p>
+             <hr>
+            <p>If you would like to work with me sign up on this website</p>
+              <button id="button">Sign Up</button>
+        </div>
+      </div> 
+    
   </header>
 
   <!------------------- MAIN CONTENT -------------------------->
@@ -53,55 +58,56 @@
     <div class="skills">
       <h3>Stuff I'm Good At:</h3>
       <!--Table?-->
-      <table class="skills-table">
+        <table class="skills-table">
           <tr>
-              <th>HTML</th>
+            <th>HTML</th>
           </tr>
           <tr>
-              <th>Coding up UI</th>
+            <th>Coding up UI</th>
           </tr>
           <tr>
-              <th>Exercise prescriptions</th>          
-            </tr>
-            <tr>
-              <th>Swimming</th>
+            <th>Exercise prescriptions</th>          
+          </tr>
+          <tr>
+            <th>Swimming</th>
           </tr>
           <tr>
             <th>Culinary Arts</th>
-        </tr>
+          </tr>
         </table>
     </div>
   </section>
+
   <section id="bottom-info">
     <div class="work-history">
       <h3>Work History</h3>
       <!--Table?-->
-      <table class="work-history-table">
-        <tr class=""><!--columnn names open tag-->
-          <th>Yrs</th>
-          <th>Company</th>
-          <th>Title</th>
-          <th>Tech Used</th>
-        </tr>
-        <tr class="special-table"><!--first line-->
-          <th>1</th>
-          <th>Senza</th>
-          <th>Project Owner</th>
-          <th>Test Flight</th>
-        </tr>
-        <tr><!--second line-->
-          <th>2</th>
-          <th>Seek Studio</th>
-          <th>Fitness Instructor</th>
-          <th>MindBody</th>
-        </tr>
-        <tr class="special-table"><!--third line-->
-          <th>3</th>
-          <th>Huntsman Institute</th>
-          <th>Exercise Specialist</th>
-          <th>Excel</th>
-        </tr>
-      </table>
+        <table class="work-history-table">
+          <tr><!--columnn names open tag-->
+            <th>Yrs</th>
+            <th>Company</th>
+            <th>Title</th>
+            <th>Tech Used</th>
+          </tr>
+          <tr class="special-table"><!--first line-->
+            <td>1</td>
+            <td>Senza</td>
+            <td>Project Owner</td>
+            <td>Test Flight</td>
+          </tr>
+          <tr><!--second line-->
+            <td>2</td>
+            <td>Seek Studio</td>
+            <td>Fitness Instructor</td>
+            <td>MindBody</td>
+          </tr>
+          <tr class="special-table"><!--third line-->
+            <td>3</td>
+            <td>Huntsman Institute</td>
+            <td>Exercise Specialist</td>
+            <td>Excel</td>
+          </tr>
+        </table>
     </div>
   </section>
 
